@@ -1,0 +1,97 @@
+@import 'style.css';
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+img {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  order: -1;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+}
+form {
+  font-weight: lighter;
+  width: 100%;
+}
+
+legend {
+  padding-inline: 0.5rem;
+}
+
+fieldset {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+}
+
+input[name='persons'] {
+  text-align: end;
+  width: 3rem;
+}
+
+input[type='datetime-local'] {
+  width: 12rem;
+}
+
+button {
+  width: 4rem;
+  padding: 0.25rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+}
+
+@media (min-width: 768px) {
+  img {
+    aspect-ratio: 10/4;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: grid;
+    grid-template-columns: 10fr 8fr;
+  }
+  img {
+    order: 1;
+    height: auto;
+    aspect-ratio: unset;
+    object-fit: unset;
+  }
+  section:nth-of-type(2) {
+    order: -1;
+  }
+
+  fieldset div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  fieldset div:nth-last-of-type(1) {
+    grid-template-columns: unset;
+  }
+}

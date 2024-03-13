@@ -1,0 +1,23 @@
+@import 'style.css';
+
+/* -------------- SECTIONS -------------- */
+
+section:nth-of-type(2) article {
+  background-color: lightgrey;
+  padding: 1rem;
+}
+
+section:nth-of-type(2) article p:last-child {
+  margin-top: 1rem;
+  text-indent: 2rem;
+}
+
+@media (min-width: 768px) {
+  /* -------------- MAIN -------------- */
+
+  main section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

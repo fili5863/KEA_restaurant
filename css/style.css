@@ -1,0 +1,142 @@
+@import '_variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* -------------- FONTS -------------- */
+h1 {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: var(--ColorHeader);
+  color: white;
+}
+
+/* -------------- NAV -------------- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--colorbgSecondary);
+  padding: 0.25rem 2rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+#visited {
+  color: tan;
+  font-size: 1.2rem;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  width: 100%;
+}
+
+nav li {
+  border-bottom: 0.12rem solid white;
+  padding: 0.15rem;
+}
+
+nav li:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
+/* -------------- MAIN -------------- */
+main {
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* -------------- IMG -------------- */
+
+img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+/* -------------- ARTICLES -------------- */
+
+article {
+  line-height: 1.3rem;
+  font-weight: lighter;
+}
+
+article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: start;
+  padding: 1rem 1.2rem;
+  font-weight: normal;
+  color: var(--ColorHeader);
+}
+
+/* -------------- FOOTER -------------- */
+footer {
+  background-color: var(--colorbgSecondary);
+  color: var(--colorSecondary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 0rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* -------------- NAV -------------- */
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem;
+  }
+
+  ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  nav li {
+    border-bottom: none;
+  }
+
+  nav li a:hover {
+    color: var(--ColorHeader);
+  }
+
+  /* -------------- FONTS -------------- */
+  h1 {
+    text-align: start;
+  }
+
+  /* -------------- SECTIONS -------------- */
+
+  section:nth-of-type(2) {
+    margin-left: 2rem;
+  }
+
+  /* -------------- IMG -------------- */
+
+  img {
+    order: 1;
+  }
+}
